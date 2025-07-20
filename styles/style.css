@@ -12,10 +12,12 @@
   --cor2: #1472b7;
   --cor3: #ffffff;
   --cor4: #000000;
+  --cor5: #303030;
 }
 
 body {
     background-color: var(--cor4);
+    color: white;
 }
 
 /* Header */
@@ -54,6 +56,7 @@ header p {
     margin-bottom: 20px;
     color: var(--cor3);
     font-weight: 400;
+    font-size: 1.2rem;
 }
 
 header button {
@@ -65,4 +68,113 @@ header button {
     background-color: transparent;
     color: var(--cor1);
     font-weight: 900;
+    cursor: pointer;
+}
+
+/* Main */
+/* Seção 1 */
+
+section#course-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: var(--cor1) solid 1px;
+    padding-bottom: 150px;
+}
+
+section#course-content > h2 {
+    word-spacing: 3px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--cor1);
+    font-size: 1.7rem;
+}
+
+section#course-content > p {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+div.modules-list {
+    /* background-color: var(--cor2); */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+div.modules-list > div.module {
+    background-color: var(--cor5);
+    padding: 15px 100px;
+    text-align: center;
+    border-radius: 50px;
+    border: var(--cor1) solid 1px;
+    box-shadow: inset var(--cor4) 1px 1px 5px;
+    cursor: pointer;
+}
+
+div.module > span {
+    color: var(--cor1);
+}
+
+/* Seção 2 */
+section#transform-world {
+    background-image: url("../assets/images/woman-code.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 330px;
+    margin-bottom: 80px;
+    
+}
+
+
+/* Seção 3 */
+section#professional-challenges {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: var(--cor1) solid 1px;
+    padding-bottom: 150px;
+    gap: 50px;
+}
+
+section#professional-challenges > h2 {
+    text-transform: uppercase;
+    word-spacing: 3px;
+    letter-spacing: 4px;
+    color: var(--cor1);
+    font-size: 1.7rem;
+}
+
+section#professional-challenges > img {
+    max-width: 700px;
+}
+
+section#professional-challenges > p {
+    max-width: 800px;
+}
+
+/* Seção 4 */
+footer {
+    background-color: var(--cor1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer > img {
+    max-width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--cor2);
 }

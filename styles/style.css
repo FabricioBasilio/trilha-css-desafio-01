@@ -13,11 +13,14 @@
   --cor3: #ffffff;
   --cor4: #000000;
   --cor5: #303030;
+  --cor6: #1473b773;
+  --cor7: rgba(0, 0, 0, .6);
+  --cor8: rgba(49, 168, 221, .2);
 }
 
 body {
     background-color: var(--cor4);
-    color: white;
+    color: var(--cor3);
 }
 
 /* Header */
@@ -27,26 +30,38 @@ header {
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
-    /* background-color: #1472b7; */
-    background-image: url("../assets/images/banner.png");
+    background-image: linear-gradient(var(--cor7), var(--cor8), var(--cor7)), url('../assets/images/banner.png');
+    background-size: cover;
     border-bottom: var(--cor1) solid 1px;
 }
 
-/* header .logo {
-    background-color: #1472b7;
-} */
+header div.logo {
+    margin: 50px auto;
+    background-color: var(--cor7);
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
 
 header img {
     display: block;
-    margin: 0 auto 30px auto;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 
 header h1 {
     text-transform: uppercase;
     margin-bottom: 20px;
     font-weight: 900;
-    color: var(--cor2);
-    
+    color: transparent;
+    font-size: 2.3rem;
+    background: -webkit-linear-gradient(var(--cor1), var(--cor2));
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 header p {
@@ -61,7 +76,7 @@ header p {
 
 header button {
     text-transform: uppercase;
-    padding: 10px 50px;
+    padding: 20px 60px;
     margin-bottom: 60px;
     border-radius: 0;
     border: var(--cor1) solid 2px;
@@ -69,6 +84,7 @@ header button {
     color: var(--cor1);
     font-weight: 900;
     cursor: pointer;
+    letter-spacing: 2px;
 }
 
 /* Main */
@@ -99,7 +115,6 @@ section#course-content > p {
 }
 
 div.modules-list {
-    /* background-color: var(--cor2); */
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -127,7 +142,16 @@ section#transform-world {
     background-attachment: fixed;
     height: 330px;
     margin-bottom: 80px;
-    
+    border-bottom: var(--cor1) solid 1px;
+    padding: 100px;
+}
+
+section#transform-world > p {
+    text-transform: lowercase;
+    font-weight: 900;
+    text-shadow: var(--cor1) 3px 3px;
+    font-size: 2.5rem;
+    max-width: 250px;
 }
 
 
@@ -148,7 +172,8 @@ section#professional-challenges > h2 {
     word-spacing: 3px;
     letter-spacing: 4px;
     color: var(--cor1);
-    font-size: 1.7rem;
+    font-size: 2rem;
+    max-width: 800px;
 }
 
 section#professional-challenges > img {
@@ -161,7 +186,7 @@ section#professional-challenges > p {
 
 /* Seção 4 */
 footer {
-    background-color: var(--cor1);
+    background-image: -webkit-linear-gradient(var(--cor4), var(--cor6));
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -176,5 +201,5 @@ footer > img {
 footer a {
     text-decoration: none;
     font-weight: 600;
-    color: var(--cor2);
+    color: var(--cor1);
 }
